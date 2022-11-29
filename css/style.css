@@ -7,6 +7,7 @@
   --grey-color: #F5F4FA;
   --background-dark-color: #2F303A;
   --soc-color: #AFB1B8;
+  --shadow-color: #EEEEEE;
 }
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -140,12 +141,15 @@ body {
 /*---MAIN---*/
 .hero { 
   max-width: 1600px;
-  background-color: rgba(47, 48, 58, 0.4);
-  background-image: url('../images/img-fon.jpg');   
+  background-image: url('../images/img-fon.jpg');
   background-size: cover;
   background-position: center; 
-  background-repeat: no-repeat; 
-  margin: 0 0;
+  background-repeat: no-repeat;  
+  
+}
+.container-hero {
+  background-color: rgba(47, 48, 58, 0.4);
+  margin: auto 0;
   padding: 200px 0;
 }
 
@@ -205,7 +209,10 @@ body {
   display: flex;
   height: 120px;
   background-color: var(--grey-color) ;
-  justify-content: center; 
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 30px;  
+  border-radius: 4px;
   
 }
 
@@ -246,6 +253,7 @@ body {
 .team {
   margin: 0 0;
   padding: 94px 15px;
+  background: var(--grey-color) ;
 }
 
 .team-list {
@@ -422,8 +430,12 @@ img {
   background-color: var(--light-color) ;
   padding: 20px 24px;   
 }
-.portfolio-link:hover,
-.portfolio-link:focus div {   
+.portfolio-link:hover > div {   
+  border: 1px solid var(--shadow-color);  
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.portfolio-link:focus > div { 
+  border: 1px solid var(--shadow-color);  
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
