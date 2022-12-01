@@ -8,6 +8,7 @@
   --background-dark-color: #2F303A;
   --soc-color: #AFB1B8;
   --shadow-color: #EEEEEE;
+  --border-color: #ECECEC;
 }
 p, h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -43,7 +44,7 @@ body {
 }
 /*---HEADER---*/
 .header {  
-  border-bottom: 1px solid #ECECEC;
+  border-bottom: 1px solid var(--border-color);
   background-color: var(--light-color);
 }
 
@@ -144,12 +145,12 @@ body {
   background-image: url('../images/img-fon.jpg');
   background-size: cover;
   background-position: center; 
-  background-repeat: no-repeat;  
-  
+  background-repeat: no-repeat; 
+  margin: 0 auto;  
 }
 .container-hero {
   background-color: rgba(47, 48, 58, 0.4);
-  margin: auto 0;
+  margin: 0 auto;
   padding: 200px 0;
 }
 
@@ -417,26 +418,33 @@ img {
 .portfolio-btn:focus {
   color: var(--light-color);
   background-color: var(--accent-color) ;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 }
 
 .portfolio-list {
   display: inline-flex;
   flex-wrap: wrap;
   margin: 0 0;
-  gap: 30px;  
+  gap: 30px;    
+}
+.portfolio-item {
+  background: var(--light-color) ;
+  border: 1px solid var(--shadow-color) ;
+}
+.portfolio-link {
+  display: block;
 }
 
 .portfolio-item div {
   background-color: var(--light-color) ;
+  border: 1px solid var(--border-color);
   padding: 20px 24px;   
 }
-.portfolio-link:hover > div {   
-  border: 1px solid var(--shadow-color);  
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.portfolio-link:hover {   
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.portfolio-link:focus > div { 
-  border: 1px solid var(--shadow-color);  
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+.portfolio-link:focus {   
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-title {
