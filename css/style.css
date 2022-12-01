@@ -427,10 +427,7 @@ img {
   margin: 0 0;
   gap: 30px;    
 }
-.portfolio-item {
-  background: var(--light-color) ;
-  border: 1px solid var(--shadow-color) ;
-}
+
 .portfolio-link {
   display: block;
 }
